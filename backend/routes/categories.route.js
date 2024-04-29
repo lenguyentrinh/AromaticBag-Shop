@@ -1,8 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const categoryController = require("../controller/categories");
+const {
+  getDeleteCategory,
+  postEditCategory,
+  postAddCategory,
+  getAllCategory,
+} = require("../controller/categories.controller");
 const multer = require("multer");
-const { loginCheck } = require("../middleware/auth");
+const { loginCheck } = require("../middleware/auth.middleware");
 
 // Image Upload setting
 var storage = multer.diskStorage({
@@ -16,18 +21,14 @@ var storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/all-category", categoryController.getAllCategory);
+router.get("/all-category", getAllCategory);
 router.post(
   "/add-category",
   loginCheck,
   upload.single("cImage"),
-  categoryController.postAddCategory
+  postAddCategory
 );
-router.post("/edit-category", loginCheck, categoryController.postEditCategory);
-router.post(
-  "/delete-category",
-  loginCheck,
-  categoryController.getDeleteCategory
-);
+router.post("/edit-category", loginCheck, postEditCategory);
+router.post("/delete-category", loginCheck, getDeleteCategory);
 
 module.exports = router;

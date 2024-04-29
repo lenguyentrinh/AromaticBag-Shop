@@ -1,6 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const customizeController = require("../controller/customize");
+const {
+  getAllData,
+  deleteSlideImage,
+  uploadSlideImage,
+  getImages,
+} = require("../controller/customize.controller");
 const multer = require("multer");
 
 var storage = multer.diskStorage({
@@ -14,13 +19,9 @@ var storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/get-slide-image", customizeController.getImages);
-router.post("/delete-slide-image", customizeController.deleteSlideImage);
-router.post(
-  "/upload-slide-image",
-  upload.single("image"),
-  customizeController.uploadSlideImage
-);
-router.post("/dashboard-data", customizeController.getAllData);
+router.get("/get-slide-image", getImages);
+router.post("/delete-slide-image", deleteSlideImage);
+router.post("/upload-slide-image", upload.single("image"), uploadSlideImage);
+router.post("/dashboard-data", getAllData);
 
 module.exports = router;
