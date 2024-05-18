@@ -12,6 +12,7 @@ const categoryRouter = require("./routes/categories.route.js");
 const productRouter = require("./routes/products.route.js");
 const brainTreeRouter = require("./routes/braintree.route.js");
 const orderRouter = require("./routes/orders.route.js");
+const paymentRouter = require("./routes/payment.route.js");
 const usersRouter = require("./routes/users.route.js");
 const customizeRouter = require("./routes/customize.route.js");
 // Import Auth middleware for check user login or not~
@@ -50,6 +51,7 @@ app.use("/api/category", categoryRouter);
 app.use("/api/product", productRouter);
 app.use("/api", brainTreeRouter);
 app.use("/api/order", orderRouter);
+app.use("/api/payment", paymentRouter);
 app.use("/api/customize", customizeRouter);
 
 // Run Server

@@ -4,10 +4,7 @@ import { LayoutContext } from "../layout";
 import { subTotal, quantity, totalCost } from "../partials/Mixins";
 
 import { cartListProduct } from "../partials/FetchApi";
-import { getBrainTreeToken, getPaymentProcess } from "./FetchApi";
-import { fetchData, fetchbrainTree, pay } from "./Action";
-
-import DropIn from "braintree-web-drop-in-react";
+import { fetchData, pay } from "./Action";
 
 const apiURL = process.env.REACT_APP_API_URL;
 
@@ -26,9 +23,6 @@ export const CheckoutComponent = (props) => {
 
   useEffect(() => {
     fetchData(cartListProduct, dispatch);
-    fetchbrainTree(getBrainTreeToken, setState);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (data.loading) {
@@ -113,15 +107,7 @@ export const CheckoutComponent = (props) => {
                       placeholder="+880"
                     />
                   </div>
-                  <DropIn
-                    options={{
-                      authorization: state.clientToken,
-                      paypal: {
-                        flow: "vault",
-                      },
-                    }}
-                    onInstance={(instance) => (state.instance = instance)}
-                  />
+
                   <div
                     onClick={(e) =>
                       pay(
@@ -129,7 +115,6 @@ export const CheckoutComponent = (props) => {
                         dispatch,
                         state,
                         setState,
-                        getPaymentProcess,
                         totalCost,
                         history
                       )

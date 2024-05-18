@@ -30,3 +30,8 @@ export const createOrder = async (orderData) => {
     console.log(error);
   }
 };
+
+export const getCheckoutUrl = async (paymentData) => {
+  let res = await axios.post(`${apiURL}/api/payment/checkout`, paymentData);
+  return res.data;
+}

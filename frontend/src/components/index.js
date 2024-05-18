@@ -17,6 +17,8 @@ import { DashboardAdmin, Categories, Products, Orders } from "./admin";
 import { UserProfile, UserOrders, SettingUser } from "./shop/dashboardUser";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { CancelComponent } from "./shop/order/cancel";
+import { PayoutSuccessComponent } from "./shop/order/success";
 
 /* Routing All page will be here */
 const Routes = (props) => {
@@ -30,6 +32,8 @@ const Routes = (props) => {
         <Route exact path="/custom" component={custom} />
         <Route exact path="/contact-us" component={ContactUs} />
         <Route exact path="/products/:id" component={ProductDetails} />
+        <Route exact path="/payment/cancel" component={CancelComponent} />
+        <Route exact path="/payment/success" component={PayoutSuccessComponent} />
         <Route
           exact
           path="/products/category/:catId"
