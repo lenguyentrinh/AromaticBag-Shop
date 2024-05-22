@@ -46,12 +46,16 @@ export const pay = async (
   } else {
     dispatch({ type: "loading", payload: true });
     try {
-      const payoutData = await getCheckoutUrl({...data, ...state, amountTotal: totalCost() })
+      const payoutData = await getCheckoutUrl({
+        ...data,
+        ...state,
+        amountTotal: totalCost(),
+      });
       const { error, url } = payoutData;
-      if( !error ) {
+      if (!error) {
+        console.log("payoutData", payoutData);
         window.location.href = url;
-      }
-      else {
+      } else {
         setState({ ...state, error });
       }
     } catch (error) {

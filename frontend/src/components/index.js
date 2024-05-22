@@ -11,7 +11,7 @@ import {
   ProductByCategory,
   CheckoutPage,
   ContactUs,
-  custom
+  custom,
 } from "./shop";
 import { DashboardAdmin, Categories, Products, Orders } from "./admin";
 import { UserProfile, UserOrders, SettingUser } from "./shop/dashboardUser";
@@ -33,7 +33,11 @@ const Routes = (props) => {
         <Route exact path="/contact-us" component={ContactUs} />
         <Route exact path="/products/:id" component={ProductDetails} />
         <Route exact path="/payment/cancel" component={CancelComponent} />
-        <Route exact path="/payment/success" component={PayoutSuccessComponent} />
+        <Route
+          exact
+          path="/payment/success"
+          component={PayoutSuccessComponent}
+        />
         <Route
           exact
           path="/products/category/:catId"

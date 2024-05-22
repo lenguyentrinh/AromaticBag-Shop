@@ -128,9 +128,7 @@ const ProductTable = ({ product, deleteProduct, editProduct }) => {
   return (
     <Fragment>
       <tr>
-        <td className="p-2 text-left">
-          {product.pName.slice(0, 15)}...
-        </td>
+        <td className="p-2 text-left">{product.pName.slice(0, 15)}...</td>
         <td className="p-2 text-left">
           {product.pDescription.slice(0, 15)}...
         </td>
@@ -180,7 +178,7 @@ const ProductTable = ({ product, deleteProduct, editProduct }) => {
               />
             </svg>
           </span>
-          <span
+          {/* <span
             onClick={(e) => deleteProduct(product._id)}
             className="cursor-pointer hover:bg-gray-200 rounded-lg p-2 mx-1"
           >
@@ -196,7 +194,7 @@ const ProductTable = ({ product, deleteProduct, editProduct }) => {
                 clipRule="evenodd"
               />
             </svg>
-          </span>
+          </span> */}
         </td>
       </tr>
     </Fragment>

@@ -137,7 +137,7 @@ const ReviewForm = (props) => {
               <textarea
                 onChange={(e) => setFdata({ ...fData, review: e.target.value })}
                 value={fData.review}
-                className="border px-4 py-2 focus:outline-none"
+                className="border px-4 py-2 focus:outline-none input-comment"
                 name="textArea"
                 id="textArea"
                 cols={30}
@@ -147,8 +147,7 @@ const ReviewForm = (props) => {
             </div>
             <div
               onClick={(e) => reviewSubmitHanlder(fData, setFdata, fetchData)}
-              style={{ background: "#303031" }}
-              className="inline-block rounded px-4 py-2 text-white text-center cursor-pointer"
+              className="inline-block  px-4 py-2 text-white text-center cursor-pointer summit-comment"
             >
               Submit
             </div>

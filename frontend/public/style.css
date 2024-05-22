@@ -87488,9 +87488,8 @@ video {
 .login-bg {
   background-image:
   url('./image/bg.png');
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   padding: 20px;
 }

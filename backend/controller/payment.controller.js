@@ -14,17 +14,29 @@ const getCheckoutUrl = async (req, res) => {
       amount: amountTotal,
       description: `Checkout order`,
       orderCode: orderCode,
-      returnUrl: `${process.env.WEBAPP_URL}/payment/success`,
-      cancelUrl: `${process.env.WEBAPP_URL}/payment/cancel`,
+      returnUrl: `${
+        process.env.WEBAPP_URL
+      }/payment/success?&address=${encodeURIComponent(
+        data.address
+      )}&phone=${encodeURIComponent(data.phone)}&amount=${encodeURIComponent(
+        data.amountTotal
+      )}`,
+      // cancelUrl: `${process.env.WEBAPP_URL}/payment/cancel`,
+      cancelUrl: `${
+        process.env.WEBAPP_URL
+      }/payment/success?&address=${encodeURIComponent(
+        data.address
+      )}&phone=${encodeURIComponent(data.phone)}&amount=${encodeURIComponent(
+        data.amountTotal
+      )}`,
     };
     const paymentLink = await payos.createPaymentLink(order);
     res.json({ url: paymentLink.checkoutUrl });
-  }
-  catch (error) {
+  } catch (error) {
     res.json({ error: error.message });
   }
-}
+};
 
 module.exports = {
-  getCheckoutUrl
-}
+  getCheckoutUrl,
+};

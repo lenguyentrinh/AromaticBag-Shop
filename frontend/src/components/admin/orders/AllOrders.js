@@ -50,7 +50,6 @@ const AllCategory = (props) => {
               <th className="px-4 py-2 border">Phone</th>
               <th className="px-4 py-2 border">Address</th>
               <th className="px-4 py-2 border">Created at</th>
-              <th className="px-4 py-2 border">Updated at</th>
               <th className="px-4 py-2 border">Actions</th>
             </tr>
           </thead>
@@ -136,9 +135,7 @@ const CategoryTable = ({ order, editOrder }) => {
             </span>
           )}
         </td>
-        <td className="hover:bg-gray-200 p-2 text-center">
-          ${order.amount}
-        </td>
+        <td className="hover:bg-gray-200 p-2 text-center">${order.amount}</td>
         <td className="hover:bg-gray-200 p-2 text-center">
           {order.transactionId}
         </td>
@@ -150,9 +147,6 @@ const CategoryTable = ({ order, editOrder }) => {
         <td className="hover:bg-gray-200 p-2 text-center">{order.address}</td>
         <td className="hover:bg-gray-200 p-2 text-center">
           {moment(order.createdAt).format("lll")}
-        </td>
-        <td className="hover:bg-gray-200 p-2 text-center">
-          {moment(order.updatedAt).format("lll")}
         </td>
         <td className="p-2 flex items-center justify-center">
           <span
@@ -173,7 +167,7 @@ const CategoryTable = ({ order, editOrder }) => {
               />
             </svg>
           </span>
-          <span
+          {/* <span
             onClick={(e) => deleteOrderReq(order._id, dispatch)}
             className="cursor-pointer hover:bg-gray-200 rounded-lg p-2 mx-1"
           >
@@ -191,7 +185,7 @@ const CategoryTable = ({ order, editOrder }) => {
                 d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
               />
             </svg>
-          </span>
+          </span> */}
         </td>
       </tr>
     </Fragment>

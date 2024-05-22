@@ -1,16 +1,13 @@
-import React, { Fragment, createContext, useReducer } from "react";
-import Layout from "../layout";
-import Slider from "./Slider";
-import ProductCategory from "./ProductCategory";
-import { homeState, homeReducer } from "./HomeContext";
-import IntroduceAboutShop from "./IntroduceAboutShop";
-export const HomeContext = createContext();
+import React, { Fragment, useContext } from "react";
+import ProductCategoryDropdown from "./ProductCategoryDropdown";
+import { HomeContext } from "./index";
 
-const HomeComponent = () => {
+const IntroduceAboutShop = (props) => {
+  const { data, dispatch } = useContext(HomeContext);
+
   return (
     <Fragment>
-      <Slider />
-      {/* <section className="">
+      <section className="">
         <div className=" about-shop">
           <h3 className="hearder-about-shop text-center">
             WELCOME TO OUR STORE
@@ -70,24 +67,9 @@ const HomeComponent = () => {
             </div>
           </div>
         </div>
-      </section> */}
-      <IntroduceAboutShop />
-      <section className="mr-4 ml-4">
-        <ProductCategory />
       </section>
     </Fragment>
   );
 };
 
-const Home = (props) => {
-  const [data, dispatch] = useReducer(homeReducer, homeState);
-  return (
-    <Fragment>
-      <HomeContext.Provider value={{ data, dispatch }}>
-        <Layout children={<HomeComponent />} />
-      </HomeContext.Provider>
-    </Fragment>
-  );
-};
-
-export default Home;
+export default IntroduceAboutShop;

@@ -17,7 +17,7 @@ export const CheckoutComponent = (props) => {
     phone: "",
     error: false,
     success: false,
-    clientToken: null,
+    clientToken: "",
     instance: {},
   });
 
@@ -110,14 +110,7 @@ export const CheckoutComponent = (props) => {
 
                   <div
                     onClick={(e) =>
-                      pay(
-                        data,
-                        dispatch,
-                        state,
-                        setState,
-                        totalCost,
-                        history
-                      )
+                      pay(data, dispatch, state, setState, totalCost, history)
                     }
                     className="w-full px-4 py-2 text-center text-white font-semibold cursor-pointer"
                     style={{ background: "#303031" }}
@@ -175,7 +168,7 @@ const CheckoutProducts = ({ products }) => {
                     {product.pName.slice(0, 30) + "..."}
                   </div>
                   <div className="md:ml-6 font-semibold text-gray-600 text-sm">
-                    Price :  {product.pPrice}₫{" "}
+                    Price : {product.pPrice}₫{" "}
                   </div>
                   <div className="md:ml-6 font-semibold text-gray-600 text-sm">
                     Quantitiy : {quantity(product._id)}
