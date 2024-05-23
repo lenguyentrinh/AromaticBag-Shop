@@ -27,7 +27,7 @@ const IntroduceAboutShop = (props) => {
                   alt="Girl in a jacket"
                 ></img>
               </div>
-              <div className="item-about-shop-content pl-3">
+              <div className="item-about-shop-content ">
                 <h6 className="item-about-shoh6-header">𝐍𝐚𝐭𝐮𝐫𝐚𝐥 𝐢𝐧𝐠𝐫𝐞𝐝𝐢𝐞𝐧𝐭𝐬</h6>
                 <p className="item-about-shop-header">
                   𝐼𝑛𝑔𝑟𝑒𝑑𝑖𝑒𝑛𝑡𝑠 100% 𝑛𝑎𝑡𝑢𝑟𝑎𝑙
@@ -42,7 +42,7 @@ const IntroduceAboutShop = (props) => {
                   alt="Girl in a jacket"
                 ></img>
               </div>
-              <div className="item-about-shop-content  pl-5">
+              <div className="item-about-shop-content  ">
                 <h6 className="item-about-shoh6-header">𝐄𝐱𝐜𝐞𝐩𝐭𝐢𝐨𝐧𝐚𝐥 𝐪𝐮𝐚𝐥𝐢𝐭𝐲</h6>
                 <p className="item-about-shop-header">
                   𝑃𝑟𝑜𝑣𝑖𝑑𝑖𝑛𝑔 𝑜𝑢𝑡𝑠𝑡𝑎𝑛𝑑𝑖𝑛𝑔 𝑞𝑢𝑎𝑙𝑖𝑡𝑦 <br />
@@ -58,7 +58,7 @@ const IntroduceAboutShop = (props) => {
                   alt="Girl in a jacket"
                 ></img>
               </div>
-              <div className="item-about-shop-content  pl-5">
+              <div className="item-about-shop-content ">
                 <h6 className="item-about-shoh6-header">𝐃𝐢𝐯𝐞𝐫𝐬𝐞 𝐬𝐜𝐞𝐧𝐭𝐬</h6>
                 <p className="item-about-shop-header">
                   𝑀𝑎𝑑𝑒 𝑓𝑟𝑜𝑚 𝑛𝑎𝑡𝑢𝑟𝑎𝑙 𝑖𝑛𝑔𝑟𝑒𝑑𝑖𝑒𝑛𝑡𝑠: <br />
