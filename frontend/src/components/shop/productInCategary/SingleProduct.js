@@ -62,11 +62,11 @@ const SingleProduct = (props) => {
         products.map((item, index) => {
           return (
             <Fragment key={index}>
-              <div className="relative col-span-1 m-2 border shadow-lg  mb-5 bg-white rounded">
+              <div className="relative col-span-1 m-2 mb-5 bg-white item-single ">
                 <div className="w-full ">
                   <img
                     onClick={(e) => history.push(`/products/${item._id}`)}
-                    className="fix-image-product object-center cursor-pointer  rounded-top"
+                    className="fix-image-product object-center cursor-pointer image-single"
                     src={`${apiURL}/uploads/products/${item.pImages[0]}`}
                     alt=""
                   />
@@ -104,8 +104,9 @@ const SingleProduct = (props) => {
                   <div className="absolute top-0 right-0 mx-2 my-2 md:mx-4">
                     <svg
                       onClick={(e) => isWishReq(e, item._id, setWlist)}
-                      className={`${isWish(item._id, wList) && "hidden"
-                        } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700 transition-all duration-300 ease-in`}
+                      className={`${
+                        isWish(item._id, wList) && "hidden"
+                      } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700 transition-all duration-300 ease-in`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -120,8 +121,9 @@ const SingleProduct = (props) => {
                     </svg>
                     <svg
                       onClick={(e) => unWishReq(e, item._id, setWlist)}
-                      className={`${!isWish(item._id, wList) && "hidden"
-                        } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700 transition-all duration-300 ease-in`}
+                      className={`${
+                        !isWish(item._id, wList) && "hidden"
+                      } w-5 h-5 md:w-6 md:h-6 cursor-pointer text-yellow-700 transition-all duration-300 ease-in`}
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -144,10 +146,13 @@ const SingleProduct = (props) => {
         <div className="col-span-2 md:col-span-3 lg:col-span-4 flex items-center justify-center text-2xl">
           <div className=" text-2xl text-center">
             <div className="flex flex-col items-center justify-center">
-              <img className="" src="./image/NoFoundProductInWishlist.gif" alt="Girl in a jacket"></img>
+              <img
+                className=""
+                src="./image/NoFoundProductInWishlist.gif"
+                alt="Girl in a jacket"
+              ></img>
             </div>
             {/* No product found in wishList */}
-
           </div>
         </div>
       )}

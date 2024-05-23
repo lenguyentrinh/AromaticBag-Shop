@@ -17,7 +17,7 @@ const ProductCategory = (props) => {
         {images.map((img, index) => (
           <div className="col-span-1 m-2 flex flex-col items-center justify-center space-y-2 cursor-pointer border shadow-lg rounded  ">
             <img
-              className="fix-image-categories object-center cursor-pointer  rounded-top"
+              className="fix-image-categories object-center cursor-pointer  rounded-top image-intro"
               key={index}
               src={img}
             />

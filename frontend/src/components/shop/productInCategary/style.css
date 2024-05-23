@@ -25,7 +25,16 @@
   background: #b7791f;
   cursor: pointer;
 }
+.image-single{
 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.item-single{ 
+   border: 1px solid rgb(241, 226, 226);
+  box-shadow: 2px 4px 8px #b1b0b0cc;
+  border-radius: 10px;
+}
 
 svg-contact {
 	height: 23rem;

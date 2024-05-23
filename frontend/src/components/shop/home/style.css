@@ -17,6 +17,11 @@
   background: #b7791f;
   cursor: pointer;
 }
+.image-intro{
+  border: 1px solid rgb(240, 222, 222);
+  box-shadow: 1px 3px 6px #4b4848cc;
+  border-radius: 10px;
+}
 
 .slider::-moz-range-thumb {
   width: 18px;
