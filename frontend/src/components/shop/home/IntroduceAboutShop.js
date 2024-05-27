@@ -12,13 +12,13 @@ const IntroduceAboutShop = (props) => {
           <h3 className="hearder-about-shop text-center">
             𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐎𝐔𝐑 𝐒𝐓𝐎𝐑𝐄
           </h3>
-          <div className="sub-title-about-shop text-center mt-2">
+          <div className="sub-title-about-shop text-center mt-2 mb-2">
             𝑇ℎ𝑒 𝑝𝑟𝑜𝑑𝑢𝑐𝑡 𝑖𝑠 𝑐𝑜𝑚𝑝𝑙𝑒𝑡𝑒𝑙𝑦 𝑚𝑎𝑑𝑒 𝑓𝑟𝑜𝑚 𝑛𝑎𝑡𝑢𝑟𝑎𝑙 𝑖𝑛𝑔𝑟𝑒𝑑𝑖𝑒𝑛𝑡𝑠 𝑡ℎ𝑎𝑡 𝑎𝑟𝑒
             𝑢𝑠𝑒𝑟-𝑓𝑟𝑖𝑒𝑛𝑑𝑙𝑦 𝑎𝑛𝑑 𝑏𝑟𝑖𝑛𝑔 𝑎𝑛 𝑒𝑥𝑡𝑟𝑒𝑚𝑒𝑙𝑦 𝑝𝑙𝑒𝑎𝑠𝑎𝑛𝑡 𝑓𝑟𝑎𝑔𝑟𝑎𝑛𝑐𝑒
             <br />
             𝑏𝑟𝑖𝑛𝑔 𝑎𝑛 𝑒𝑥𝑡𝑟𝑒𝑚𝑒𝑙𝑦 𝑝𝑙𝑒𝑎𝑠𝑎𝑛𝑡 𝑓𝑟𝑎𝑔𝑟𝑎𝑛𝑐𝑒
           </div>
-          <div className="content-about-shop m-4 md:mx-8 md:my-6 grid grid-cols-1 md:grid-cols-3">
+          <div className="content-about-shop  grid grid-cols-1 md:grid-cols-3">
             <div className="content-about-shop-item flex">
               <div className="item-about-shop-image">
                 <img

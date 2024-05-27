@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useEffect } from "react";
 import { fetchData } from "./Action";
 import { cartListProduct } from "../partials/FetchApi";
 import { LayoutContext } from "../index";
-import { createOrder } from "./FetchApi";
+import { createOrder, sendEmailNotify } from "./FetchApi";
 import "./style.css";
 export const totalCost = () => {
   let totalCost = 0;
@@ -41,6 +41,7 @@ export const PayoutSuccessComponent = (props) => {
     try {
       let resposeData = await createOrder(orderData);
       if (resposeData.success) {
+        await sendEmailNotify(orderData);
         localStorage.setItem("cart", JSON.stringify([]));
         dispatch({ type: "cartProduct", payload: null });
         dispatch({ type: "cartTotalCost", payload: null });

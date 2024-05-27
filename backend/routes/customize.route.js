@@ -5,6 +5,7 @@ const {
   deleteSlideImage,
   uploadSlideImage,
   getImages,
+  notifyEvent,
 } = require("../controller/customize.controller");
 const multer = require("multer");
 
@@ -23,5 +24,6 @@ router.get("/get-slide-image", getImages);
 router.post("/delete-slide-image", deleteSlideImage);
 router.post("/upload-slide-image", upload.single("image"), uploadSlideImage);
 router.post("/dashboard-data", getAllData);
+router.post("/notifyEvent", notifyEvent);
 
 module.exports = router;

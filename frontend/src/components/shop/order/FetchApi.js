@@ -34,4 +34,9 @@ export const createOrder = async (orderData) => {
 export const getCheckoutUrl = async (paymentData) => {
   let res = await axios.post(`${apiURL}/api/payment/checkout`, paymentData);
   return res.data;
-}
+};
+
+export const sendEmailNotify = async (data) => {
+  let res = await axios.post(`${apiURL}/api/payment/sendEmailNotify`, data);
+  return res.info;
+};

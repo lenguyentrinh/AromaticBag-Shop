@@ -10,9 +10,10 @@ const HomeComponent = () => {
   return (
     <Fragment>
       <Slider />
-
-      <IntroduceAboutShop />
-      <section className="mr-4 ml-4">
+      <section className="mr-6 ml-6">
+        <IntroduceAboutShop />
+      </section>
+      <section className="mr-4 ml-4 mb-20">
         <ProductCategory />
       </section>
     </Fragment>
